@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8" />
@@ -18,514 +19,535 @@
   --text:        #1a2a3a;
   --text-mid:    #3a5268;
   --muted:       #7a9ab8;
- 
-  /* Blue accent */
-  --blue:        #2e82d4;
-  --blue-light:  #eaf3fc;
-  --blue-glow:   rgba(46,130,212,.15);
- 
-  /* Pink/coral highlight */
-  --pink:        #e8426e;
-  --pink-light:  #fde8ef;
-  --pink-glow:   rgba(232,66,110,.12);
- 
-  /* Status */
-  --green:       #1daa6f;
-  --green-bg:    #e8f8f2;
-  --green-bdr:   #a3dfc5;
-  --amber:       #c87c00;
-  --amber-bg:    #fdf4e3;
-  --amber-bdr:   #f0ce80;
-  --red:         #c0293a;
-  --red-bg:      #fdeaec;
-  --red-bdr:     #f0a8b0;
- 
-  --radius:      16px;
-  --radius-sm:   10px;
-  --mono:        'IBM Plex Mono', monospace;
-  --sans:        'Noto Sans TC', system-ui, sans-serif;
-  --shadow:      0 2px 12px rgba(30,80,140,.08);
-  --shadow-md:   0 4px 24px rgba(30,80,140,.12);
+
+/* Blue accent */
+–blue:        #2e82d4;
+–blue-light:  #eaf3fc;
+–blue-glow:   rgba(46,130,212,.15);
+
+/* Pink/coral highlight */
+–pink:        #e8426e;
+–pink-light:  #fde8ef;
+–pink-glow:   rgba(232,66,110,.12);
+
+/* Status */
+–green:       #1daa6f;
+–green-bg:    #e8f8f2;
+–green-bdr:   #a3dfc5;
+–amber:       #c87c00;
+–amber-bg:    #fdf4e3;
+–amber-bdr:   #f0ce80;
+–red:         #c0293a;
+–red-bg:      #fdeaec;
+–red-bdr:     #f0a8b0;
+
+–radius:      16px;
+–radius-sm:   10px;
+–mono:        ‘IBM Plex Mono’, monospace;
+–sans:        ‘Noto Sans TC’, system-ui, sans-serif;
+–shadow:      0 2px 12px rgba(30,80,140,.08);
+–shadow-md:   0 4px 24px rgba(30,80,140,.12);
 }
- 
-* { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
+- { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  min-height: 100dvh;
-  -webkit-text-size-adjust: 100%;
+font-family: var(–sans);
+background: var(–bg);
+color: var(–text);
+min-height: 100vh;
+min-height: 100dvh;
+-webkit-text-size-adjust: 100%;
 }
- 
+
 /* ── Top bar ── */
 .topbar {
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  height: 52px;
-  background: var(--card);
-  border-bottom: 1.5px solid var(--border);
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+display: flex;
+align-items: center;
+padding: 0 16px;
+height: 52px;
+background: var(–card);
+border-bottom: 1.5px solid var(–border);
+box-shadow: var(–shadow);
+position: sticky;
+top: 0;
+z-index: 100;
 }
 .topbar-logo {
-  font-family: var(--mono);
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: .04em;
-  color: var(--blue);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+font-family: var(–mono);
+font-weight: 600;
+font-size: 15px;
+letter-spacing: .04em;
+color: var(–blue);
+display: flex;
+align-items: center;
+gap: 8px;
 }
 .topbar-badge {
-  background: var(--pink);
-  color: white;
-  font-size: 9px;
-  font-weight: 700;
-  padding: 2px 6px;
-  border-radius: 4px;
-  letter-spacing: .08em;
+background: var(–pink);
+color: white;
+font-size: 9px;
+font-weight: 700;
+padding: 2px 6px;
+border-radius: 4px;
+letter-spacing: .08em;
 }
- 
+
 /* ── Page layout ── */
 .page {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 16px 14px 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+max-width: 600px;
+margin: 0 auto;
+padding: 16px 14px 100px;
+display: flex;
+flex-direction: column;
+gap: 14px;
 }
- 
+
 /* ── Cards ── */
 .card {
-  background: var(--card);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+background: var(–card);
+border: 1.5px solid var(–border);
+border-radius: var(–radius);
+box-shadow: var(–shadow);
+overflow: hidden;
 }
 .card-header {
-  padding: 13px 16px 11px;
-  border-bottom: 1.5px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--card2);
+padding: 13px 16px 11px;
+border-bottom: 1.5px solid var(–border);
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: var(–card2);
 }
 .card-title {
-  font-size: 11px;
-  font-family: var(--mono);
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--blue);
+font-size: 11px;
+font-family: var(–mono);
+font-weight: 600;
+letter-spacing: .1em;
+text-transform: uppercase;
+color: var(–blue);
 }
 .card-body {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+padding: 16px;
+display: flex;
+flex-direction: column;
+gap: 14px;
 }
- 
+
 /* ── Form rows ── */
 .row-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
 }
 .field { display: flex; flex-direction: column; gap: 5px; }
- 
+
 label {
-  font-size: 11px;
-  font-family: var(--mono);
-  font-weight: 600;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  color: var(--muted);
+font-size: 11px;
+font-family: var(–mono);
+font-weight: 600;
+letter-spacing: .07em;
+text-transform: uppercase;
+color: var(–muted);
 }
- 
+
 /* ── Inputs ── */
-input[type="text"],
-input[type="date"] {
-  width: 100%;
-  background: var(--card2);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  font-size: 16px;
-  font-family: var(--mono);
-  color: var(--text);
-  outline: none;
-  transition: border-color .15s, box-shadow .15s, background .15s;
-  min-height: 50px;
-  -webkit-appearance: none;
-  appearance: none;
+input[type=“text”],
+input[type=“date”] {
+width: 100%;
+background: var(–card2);
+border: 1.5px solid var(–border);
+border-radius: var(–radius-sm);
+padding: 12px 14px;
+font-size: 16px;
+font-family: var(–mono);
+color: var(–text);
+outline: none;
+transition: border-color .15s, box-shadow .15s, background .15s;
+min-height: 50px;
+-webkit-appearance: none;
+appearance: none;
 }
 input:focus {
-  border-color: var(--blue);
-  background: white;
-  box-shadow: 0 0 0 3px var(--blue-glow);
+border-color: var(–blue);
+background: white;
+box-shadow: 0 0 0 3px var(–blue-glow);
 }
 input::placeholder {
-  color: var(--muted);
-  opacity: .55;
-  font-size: 14px;
+color: var(–muted);
+opacity: .55;
+font-size: 14px;
 }
 /* Date input: make chevron blue */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: .5;
-  cursor: pointer;
+input[type=“date”]::-webkit-calendar-picker-indicator {
+opacity: .5;
+cursor: pointer;
 }
- 
+
 /* ── Cabin grid ── */
 .cabin-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 8px;
 }
 .cabin-cell { position: relative; }
 .cabin-tag {
-  position: absolute;
-  top: 50%; right: 12px;
-  transform: translateY(-50%);
-  font-size: 11px;
-  font-family: var(--mono);
-  font-weight: 700;
-  color: var(--blue);
-  pointer-events: none;
-  letter-spacing: .05em;
+position: absolute;
+top: 50%; right: 12px;
+transform: translateY(-50%);
+font-size: 11px;
+font-family: var(–mono);
+font-weight: 700;
+color: var(–blue);
+pointer-events: none;
+letter-spacing: .05em;
 }
 .cabin-cell input { padding-right: 30px; }
 .cabin-cell.hidden { display: none; }
- 
+
 /* ── Toggle (W cabin) ── */
 .toggle-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 4px 0;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 4px 0;
 }
 .toggle-switch {
-  position: relative;
-  width: 44px;
-  height: 26px;
-  flex-shrink: 0;
+position: relative;
+width: 44px;
+height: 26px;
+flex-shrink: 0;
 }
 .toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
 .toggle-slider {
-  position: absolute;
-  inset: 0;
-  background: var(--border-mid);
-  border-radius: 13px;
-  transition: background .2s;
-  cursor: pointer;
+position: absolute;
+inset: 0;
+background: var(–border-mid);
+border-radius: 13px;
+transition: background .2s;
+cursor: pointer;
 }
 .toggle-slider:before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 3px;
-  top: 3px;
-  background: white;
-  border-radius: 50%;
-  transition: transform .2s;
-  box-shadow: 0 1px 4px rgba(0,0,0,.15);
+content: ‘’;
+position: absolute;
+width: 20px;
+height: 20px;
+left: 3px;
+top: 3px;
+background: white;
+border-radius: 50%;
+transition: transform .2s;
+box-shadow: 0 1px 4px rgba(0,0,0,.15);
 }
-.toggle-switch input:checked + .toggle-slider { background: var(--blue); }
+.toggle-switch input:checked + .toggle-slider { background: var(–blue); }
 .toggle-switch input:checked + .toggle-slider:before { transform: translateX(18px); }
-.toggle-label { font-size: 14px; color: var(--text-mid); font-weight: 500; }
- 
+.toggle-label { font-size: 14px; color: var(–text-mid); font-weight: 500; }
+
 /* ── Route status ── */
 .route-status {
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
-  border: 1.5px solid var(--border);
-  background: var(--card2);
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--text-mid);
+padding: 12px 14px;
+border-radius: var(–radius-sm);
+border: 1.5px solid var(–border);
+background: var(–card2);
+font-size: 13px;
+line-height: 1.5;
+color: var(–text-mid);
 }
-.route-status.ok  { border-color: var(--green-bdr);  background: var(--green-bg);  color: var(--green); }
-.route-status.warn{ border-color: var(--amber-bdr);  background: var(--amber-bg);  color: var(--amber); }
-.route-status.err { border-color: var(--red-bdr);    background: var(--red-bg);    color: var(--red); }
+.route-status.ok  { border-color: var(–green-bdr);  background: var(–green-bg);  color: var(–green); }
+.route-status.warn{ border-color: var(–amber-bdr);  background: var(–amber-bg);  color: var(–amber); }
+.route-status.err { border-color: var(–red-bdr);    background: var(–red-bg);    color: var(–red); }
 .route-status .rs-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  opacity: .65;
-  margin-bottom: 3px;
+font-family: var(–mono);
+font-size: 10px;
+font-weight: 600;
+letter-spacing: .08em;
+text-transform: uppercase;
+opacity: .65;
+margin-bottom: 3px;
 }
 .route-options { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
 .route-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  background: white;
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: border-color .15s, background .15s;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 10px 12px;
+background: white;
+border: 1.5px solid var(–border);
+border-radius: 8px;
+cursor: pointer;
+transition: border-color .15s, background .15s;
 }
-.route-option:hover { border-color: var(--blue); background: var(--blue-light); }
-.route-option input[type=radio] { accent-color: var(--blue); width: 16px; height: 16px; flex-shrink: 0; }
-.route-option .rcode { font-family: var(--mono); font-weight: 600; font-size: 14px; color: var(--text); }
-.route-option .robs { font-size: 11px; color: var(--muted); margin-top: 1px; font-family: var(--mono); }
- 
+.route-option:hover { border-color: var(–blue); background: var(–blue-light); }
+.route-option input[type=radio] { accent-color: var(–blue); width: 16px; height: 16px; flex-shrink: 0; }
+.route-option .rcode { font-family: var(–mono); font-weight: 600; font-size: 14px; color: var(–text); }
+.route-option .robs { font-size: 11px; color: var(–muted); margin-top: 1px; font-family: var(–mono); }
+
 /* ── Output area ── */
 .format-tabs { display: flex; gap: 4px; }
 .fmt-btn {
-  font-size: 11px;
-  font-family: var(--mono);
-  font-weight: 700;
-  padding: 5px 14px;
-  border-radius: 6px;
-  min-height: auto;
-  letter-spacing: .05em;
-  background: transparent;
-  border: 1.5px solid var(--border);
-  color: var(--muted);
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all .15s;
+font-size: 11px;
+font-family: var(–mono);
+font-weight: 700;
+padding: 5px 14px;
+border-radius: 6px;
+min-height: auto;
+letter-spacing: .05em;
+background: transparent;
+border: 1.5px solid var(–border);
+color: var(–muted);
+text-transform: uppercase;
+cursor: pointer;
+transition: all .15s;
 }
 .fmt-btn.active {
-  background: var(--blue);
-  color: white;
-  border-color: var(--blue);
+background: var(–blue);
+color: white;
+border-color: var(–blue);
 }
- 
+
 textarea {
-  width: 100%;
-  min-height: 160px;
-  background: var(--card2);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 14px;
-  font-size: 14px;
-  font-family: var(--mono);
-  line-height: 1.7;
-  color: var(--text);
-  outline: none;
-  resize: vertical;
-  transition: border-color .15s, box-shadow .15s;
-  -webkit-appearance: none;
+width: 100%;
+min-height: 160px;
+background: var(–card2);
+border: 1.5px solid var(–border);
+border-radius: var(–radius-sm);
+padding: 14px;
+font-size: 14px;
+font-family: var(–mono);
+line-height: 1.7;
+color: var(–text);
+outline: none;
+resize: vertical;
+transition: border-color .15s, box-shadow .15s;
+-webkit-appearance: none;
 }
 textarea:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 3px var(--blue-glow);
-  background: white;
+border-color: var(–blue);
+box-shadow: 0 0 0 3px var(–blue-glow);
+background: white;
 }
- 
+
 /* Example box */
 .example-box {
-  padding: 12px 14px;
-  background: var(--blue-light);
-  border: 1.5px solid #c0d8f0;
-  border-radius: var(--radius-sm);
+padding: 12px 14px;
+background: var(–blue-light);
+border: 1.5px solid #c0d8f0;
+border-radius: var(–radius-sm);
 }
 .example-title {
-  font-size: 10px;
-  font-family: var(--mono);
-  font-weight: 700;
-  letter-spacing: .09em;
-  text-transform: uppercase;
-  color: var(--blue);
-  margin-bottom: 7px;
-  opacity: .8;
+font-size: 10px;
+font-family: var(–mono);
+font-weight: 700;
+letter-spacing: .09em;
+text-transform: uppercase;
+color: var(–blue);
+margin-bottom: 7px;
+opacity: .8;
 }
 .example-text {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-mid);
-  line-height: 1.75;
-  white-space: pre;
+font-family: var(–mono);
+font-size: 12px;
+color: var(–text-mid);
+line-height: 1.75;
+white-space: pre;
 }
- 
+
 /* ── Sticky bottom actions ── */
 .sticky-actions {
-  position: fixed;
-  bottom: 0;
-  left: 0; right: 0;
-  padding: 12px 14px;
-  padding-bottom: calc(12px + env(safe-area-inset-bottom));
-  background: rgba(238,244,251,.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-top: 1.5px solid var(--border);
-  display: flex;
-  gap: 10px;
-  z-index: 50;
+position: fixed;
+bottom: 0;
+left: 0; right: 0;
+padding: 12px 14px;
+padding-bottom: calc(12px + env(safe-area-inset-bottom));
+background: rgba(238,244,251,.92);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-top: 1.5px solid var(–border);
+display: flex;
+gap: 10px;
+z-index: 50;
 }
 .btn-generate {
-  flex: 1;
-  appearance: none;
-  border: 0;
-  cursor: pointer;
-  border-radius: 12px;
-  padding: 0 20px;
-  height: 52px;
-  font-size: 16px;
-  font-family: var(--sans);
-  font-weight: 900;
-  letter-spacing: .02em;
-  background: var(--pink);
-  color: white;
-  box-shadow: 0 4px 16px var(--pink-glow);
-  transition: transform .08s, opacity .15s;
-  touch-action: manipulation;
+flex: 1;
+appearance: none;
+border: 0;
+cursor: pointer;
+border-radius: 12px;
+padding: 0 20px;
+height: 52px;
+font-size: 16px;
+font-family: var(–sans);
+font-weight: 900;
+letter-spacing: .02em;
+background: var(–pink);
+color: white;
+box-shadow: 0 4px 16px var(–pink-glow);
+transition: transform .08s, opacity .15s;
+touch-action: manipulation;
 }
 .btn-generate:active { transform: scale(.97); }
- 
+
 .btn-copy {
-  appearance: none;
-  border: 2px solid var(--blue);
-  cursor: pointer;
-  border-radius: 12px;
-  padding: 0 20px;
-  height: 52px;
-  font-size: 15px;
-  font-family: var(--sans);
-  font-weight: 700;
-  background: white;
-  color: var(--blue);
-  transition: transform .08s, background .15s;
-  touch-action: manipulation;
-  white-space: nowrap;
+appearance: none;
+border: 2px solid var(–blue);
+cursor: pointer;
+border-radius: 12px;
+padding: 0 20px;
+height: 52px;
+font-size: 15px;
+font-family: var(–sans);
+font-weight: 700;
+background: white;
+color: var(–blue);
+transition: transform .08s, background .15s;
+touch-action: manipulation;
+white-space: nowrap;
 }
-.btn-copy:active { transform: scale(.97); background: var(--blue-light); }
- 
+.btn-copy:active { transform: scale(.97); background: var(–blue-light); }
+
 .btn-clear {
-  appearance: none;
-  border: 2px solid var(--border-mid);
-  cursor: pointer;
-  border-radius: 12px;
-  padding: 0 16px;
-  height: 52px;
-  font-size: 14px;
-  font-family: var(--sans);
-  font-weight: 600;
-  background: white;
-  color: var(--muted);
-  transition: transform .08s;
-  touch-action: manipulation;
+appearance: none;
+border: 2px solid var(–border-mid);
+cursor: pointer;
+border-radius: 12px;
+padding: 0 16px;
+height: 52px;
+font-size: 14px;
+font-family: var(–sans);
+font-weight: 600;
+background: white;
+color: var(–muted);
+transition: transform .08s;
+touch-action: manipulation;
 }
 .btn-clear:active { transform: scale(.97); }
- 
+.btn-share {
+appearance: none;
+border: 2px solid var(–pink);
+cursor: pointer;
+border-radius: 12px;
+padding: 0 16px;
+height: 52px;
+font-size: 22px;
+background: white;
+color: var(–pink);
+transition: transform .08s, background .15s;
+touch-action: manipulation;
+line-height: 1;
+}
+.btn-share:active { transform: scale(.97); background: var(–pink-light); }
+
 /* ── Desktop adjustments ── */
 @media (min-width: 640px) {
-  .page { padding: 24px 20px 120px; }
-  .sticky-actions { max-width: 600px; left: 50%; transform: translateX(-50%); border-radius: 16px 16px 0 0; }
+.page { padding: 24px 20px 120px; }
+.sticky-actions { max-width: 600px; left: 50%; transform: translateX(-50%); border-radius: 16px 16px 0 0; }
 }
 </style>
+
 </head>
 <body>
- 
+
 <div class="topbar">
   <div class="topbar-logo">
     CI Loading
     <span class="topbar-badge">TOOL</span>
   </div>
 </div>
- 
+
 <div class="page">
- 
+
   <!-- 輸入卡 -->
+
   <div class="card">
     <div class="card-header">
       <div class="card-title">輸入資料</div>
     </div>
     <div class="card-body">
- 
-      <div class="row-2">
-        <div class="field">
-          <label for="flightDate">日期</label>
-          <input id="flightDate" type="date" />
-        </div>
-        <div class="field">
-          <label for="flightNo">航班號</label>
-          <input id="flightNo" type="text" inputmode="numeric" pattern="[0-9]*"
-                 placeholder="503" autocomplete="off" spellcheck="false" />
-        </div>
-      </div>
- 
-      <div class="row-2">
-        <div class="field">
-          <label for="dep">出發站</label>
-          <input id="dep" type="text" maxlength="3" inputmode="text"
-                 autocapitalize="characters" placeholder="TPE" />
-        </div>
-        <div class="field">
-          <label for="arr">到達站</label>
-          <input id="arr" type="text" maxlength="3" inputmode="text"
-                 autocapitalize="characters" placeholder="NRT" />
-        </div>
-      </div>
- 
-      <div class="field">
-        <div class="toggle-row">
-          <label class="toggle-switch">
-            <input id="hasPremium" type="checkbox" />
-            <span class="toggle-slider"></span>
-          </label>
-          <span class="toggle-label">含豪華經濟艙（W 艙）</span>
-        </div>
-      </div>
- 
-      <div class="field">
-        <label>空位（Availability）</label>
-        <div class="cabin-row">
-          <div class="cabin-cell">
-            <input id="availC" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
-            <span class="cabin-tag">C</span>
-          </div>
-          <div class="cabin-cell" id="availWCell">
-            <input id="availW" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
-            <span class="cabin-tag">W</span>
-          </div>
-          <div class="cabin-cell">
-            <input id="availY" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
-            <span class="cabin-tag">Y</span>
-          </div>
-        </div>
-      </div>
- 
-      <div class="field">
-        <label>候補人數（Waitlist）</label>
-        <div class="cabin-row">
-          <div class="cabin-cell">
-            <input id="waitC" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
-            <span class="cabin-tag">C</span>
-          </div>
-          <div class="cabin-cell" id="waitWCell">
-            <input id="waitW" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
-            <span class="cabin-tag">W</span>
-          </div>
-          <div class="cabin-cell">
-            <input id="waitY" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
-            <span class="cabin-tag">Y</span>
-          </div>
-        </div>
-      </div>
- 
-      <div id="routeStatus" class="route-status">
-        <span id="routeText">尚未輸入航班號。</span>
-        <div id="routeOptions" class="route-options"></div>
-      </div>
- 
+
+```
+  <div class="row-2">
+    <div class="field">
+      <label for="flightDate">日期</label>
+      <input id="flightDate" type="date" />
+    </div>
+    <div class="field">
+      <label for="flightNo">航班號</label>
+      <input id="flightNo" type="text" inputmode="numeric" pattern="[0-9]*"
+             placeholder="503" autocomplete="off" spellcheck="false" />
     </div>
   </div>
- 
+
+  <div class="row-2">
+    <div class="field">
+      <label for="dep">出發站</label>
+      <input id="dep" type="text" maxlength="3" inputmode="text"
+             autocapitalize="characters" placeholder="TPE" />
+    </div>
+    <div class="field">
+      <label for="arr">到達站</label>
+      <input id="arr" type="text" maxlength="3" inputmode="text"
+             autocapitalize="characters" placeholder="NRT" />
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="toggle-row">
+      <label class="toggle-switch">
+        <input id="hasPremium" type="checkbox" />
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label">含豪華經濟艙（W 艙）</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>空位（Availability）</label>
+    <div class="cabin-row">
+      <div class="cabin-cell">
+        <input id="availC" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
+        <span class="cabin-tag">C</span>
+      </div>
+      <div class="cabin-cell" id="availWCell">
+        <input id="availW" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
+        <span class="cabin-tag">W</span>
+      </div>
+      <div class="cabin-cell">
+        <input id="availY" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
+        <span class="cabin-tag">Y</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label>候補人數（Waitlist）</label>
+    <div class="cabin-row">
+      <div class="cabin-cell">
+        <input id="waitC" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
+        <span class="cabin-tag">C</span>
+      </div>
+      <div class="cabin-cell" id="waitWCell">
+        <input id="waitW" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
+        <span class="cabin-tag">W</span>
+      </div>
+      <div class="cabin-cell">
+        <input id="waitY" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="0" />
+        <span class="cabin-tag">Y</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="routeStatus" class="route-status">
+    <span id="routeText">尚未輸入航班號。</span>
+    <div id="routeOptions" class="route-options"></div>
+  </div>
+
+</div>
+```
+
+  </div>
+
   <!-- 輸出卡 -->
+
   <div class="card">
     <div class="card-header">
       <div class="card-title">輸出訊息</div>
@@ -539,17 +561,18 @@ textarea:focus {
 <div id="exampleText" style="display:none"></div>
     </div>
   </div>
- 
+
 </div>
- 
+
 <div id="dbStat" style="display:none"></div>
 <!-- 固定底部按鈕 -->
 <div class="sticky-actions">
   <button class="btn-generate" id="generateBtn">⚡ 產生訊息</button>
   <button class="btn-copy" id="copyBtn">複製</button>
+  <button class="btn-share" id="shareBtn" title="分享">&#x1F4E4;</button>
   <button class="btn-clear" id="clearBtn">清空</button>
 </div>
- 
+
 <script>
 const CI_FLIGHT_MASTER = {
   "CI0003": {
@@ -6204,7 +6227,7 @@ const CI_FLIGHT_MASTER = {
     "routes": [{"dep": "HKT", "arr": "TPE", "route": "HKT-TPE", "dep_tz": "Asia/Bangkok", "arr_tz": "Asia/Taipei", "observations": 1}]
   }
 };
- 
+
 const CITY_ZH = {
   "TPE":"台北桃園","TSA":"台北松山","KHH":"高雄","RMQ":"台中",
   "NRT":"東京成田","HND":"東京羽田","KIX":"大阪","NGO":"名古屋",
@@ -6232,13 +6255,13 @@ const CITY_ZH = {
   "DWC":"杜拜","LUX":"盧森堡","DFW":"達拉斯",
   "LUX":"盧森堡","ANC":"安克拉治"
 };
- 
+
 function cityLabel(iata) {
   if (!iata) return '';
   const zh = CITY_ZH[iata.toUpperCase()];
   return zh ? iata + zh : iata;
 }
- 
+
 // ── DOM ──
 const el = {
   date: document.getElementById('flightDate'),
@@ -6263,9 +6286,9 @@ const el = {
   fmtStd: document.getElementById('fmtStd'),
   fmtCpt: document.getElementById('fmtCpt'),
 };
- 
+
 let currentFormat = 'standard';
- 
+
 // ── Init ──
 function setToday() {
   const d = new Date();
@@ -6275,10 +6298,10 @@ setToday();
 renderPremium();
 updateRoute();
 renderExample();
- 
+
 const total = Object.keys(CI_FLIGHT_MASTER).length;
- 
- 
+
+
 // ── Utilities ──
 function normFlight(v) {
   const raw = String(v||'').toUpperCase().replace(/\s+/g,'');
@@ -6308,7 +6331,7 @@ function fmtDate(v, compact) {
   const [y,m,d] = v.split('-');
   return compact ? `${m}/${d}` : `${y}/${m}/${d}`;
 }
- 
+
 // ── Premium toggle ──
 function renderPremium() {
   const show = el.premium.checked;
@@ -6316,7 +6339,7 @@ function renderPremium() {
   el.waitWCell.classList.toggle('hidden', !show);
 }
 el.premium.addEventListener('change', () => { renderPremium(); autoGenerate(); });
- 
+
 // ── Route logic ──
 function updateRoute(normalizeField) {
   const norm = normFlight(el.no.value);
@@ -6325,22 +6348,22 @@ function updateRoute(normalizeField) {
     el.no.value = norm;
   }
   el.routeOptions.innerHTML = '';
- 
+
   const box = el.routeStatus;
   box.className = 'route-status';
- 
+
   if (!norm) {
     el.routeText.textContent = '尚未輸入航班號。';
     return;
   }
- 
+
   const info = CI_FLIGHT_MASTER[normFlightKey(el.no.value)];
   if (!info) {
     box.classList.add('err');
     el.routeText.textContent = `${norm} 不在資料庫内，請手動輸入航段。`;
     return;
   }
- 
+
   if (info.auto_fill_safe && info.routes.length === 1) {
     const r = info.routes[0];
     el.dep.value = r.dep;
@@ -6349,7 +6372,7 @@ function updateRoute(normalizeField) {
     el.routeText.textContent = `${norm}  ·  已自動帶入 ${r.route}`;
     return;
   }
- 
+
   box.classList.add('warn');
   el.routeText.textContent = `${norm} 對應多個航段，請選擇：`;
   info.routes.forEach((r, i) => {
@@ -6372,7 +6395,7 @@ function updateRoute(normalizeField) {
     el.routeOptions.appendChild(lbl);
   });
 }
- 
+
 // ── Build cabin string ──
 function cabinLine(type) {
   // Standard: 商務6/豪經3/經濟10
@@ -6396,35 +6419,47 @@ function cabinCompact(type) {
   parts.push(`Y${vals.Y}`);
   return parts.join('/');
 }
- 
+
+// ── Traffic light ──
+function trafficLight() {
+  const avail = Number(cleanNum(el.availC.value)) + Number(cleanNum(el.availW.value)) + Number(cleanNum(el.availY.value));
+  const wait  = Number(cleanNum(el.waitC.value))  + Number(cleanNum(el.waitW.value))  + Number(cleanNum(el.waitY.value));
+  const diff = avail - wait;
+  if (diff >= 15) return '🟢';
+  if (diff >= 8)  return '🟡';
+  if (diff > 0)   return '🟠';
+  return '🔴';
+}
+
 // ── Generate message ──
 function generateMessage(fmt) {
   fmt = fmt || currentFormat;
   const no = normFlight(el.no.value) || 'CI0000';
   const dep = (el.dep.value||'').toUpperCase();
   const arr = (el.arr.value||'').toUpperCase();
+  const light = trafficLight();
   let txt = '';
   if (fmt === 'compact') {
     const route = (dep && arr) ? `${dep}-${arr}` : 'XXX-XXX';
-    txt = `${fmtDate(el.date.value,true)} ${no} ${route}\n`;
+    txt = `${light}${fmtDate(el.date.value,true)} ${no} ${route}\n`;
     txt += `空位 ${cabinCompact('avail')}\n`;
     txt += `候補 ${cabinCompact('wait')}`;
   } else {
     const depLabel = cityLabel(dep);
     const arrLabel = cityLabel(arr);
     const routeLabel = (dep && arr) ? `${depLabel}-${arrLabel}` : 'XXX-XXX';
-    txt = `${fmtDate(el.date.value,false)} ${no}\n${routeLabel}\n`;
+    txt = `${light}${fmtDate(el.date.value,false)} ${no}\n${routeLabel}\n`;
     txt += `空位：${cabinLine('avail')}\n`;
     txt += `候補：${cabinLine('wait')}`;
   }
   el.output.value = txt;
   currentFormat = fmt;
 }
- 
+
 function autoGenerate() {
   if (el.output.value.trim()) generateMessage();
 }
- 
+
 // ── Render example ──
 function renderExample() {
   const now = new Date();
@@ -6439,7 +6474,7 @@ function renderExample() {
       `${y}/${m}/${d} CI0503 TPE-PVG\n空位：C 2 / W 1 / Y 15\n候補：C 0 / W 2 / Y 8`;
   }
 }
- 
+
 // ── Copy ──
 function copyOutput() {
   const txt = el.output.value.trim();
@@ -6454,7 +6489,7 @@ function copyOutput() {
     document.execCommand('copy');
   });
 }
- 
+
 // ── Clear ──
 function clearAll() {
   el.no.value = '';
@@ -6467,7 +6502,7 @@ function clearAll() {
   renderPremium();
   updateRoute(false);
 }
- 
+
 // ── Format tabs ──
 function setFormat(fmt) {
   currentFormat = fmt;
@@ -6476,11 +6511,25 @@ function setFormat(fmt) {
   renderExample();
   if (el.output.value.trim()) generateMessage(fmt);
 }
- 
+
 // ── Events ──
 document.getElementById('generateBtn').addEventListener('click', () => generateMessage());
 document.getElementById('copyBtn').addEventListener('click', copyOutput);
 document.getElementById('clearBtn').addEventListener('click', clearAll);
+document.getElementById('shareBtn').addEventListener('click', () => {
+  const txt = el.output.value.trim();
+  if (!txt) { alert('請先產生訊息。'); return; }
+  if (navigator.share) {
+    navigator.share({ text: txt }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(txt).then(() => {
+      const btn = document.getElementById('shareBtn');
+      const old = btn.innerHTML;
+      btn.innerHTML = '✓';
+      setTimeout(() => btn.innerHTML = old, 1200);
+    });
+  }
+});
 el.fmtStd.addEventListener('click', () => setFormat('standard'));
 el.fmtCpt.addEventListener('click', () => setFormat('compact'));
 el.no.addEventListener('input', () => updateRoute(false));
@@ -6492,5 +6541,6 @@ el.arr.addEventListener('input', () => uppercaseIata(el.arr));
   el[k].addEventListener('input', () => { if (el.output.value.trim()) autoGenerate(); });
 });
 </script>
+
 </body>
 </html>
